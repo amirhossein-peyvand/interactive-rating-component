@@ -1,0 +1,9 @@
+body {
+  background-color: hsl(216, 12%, 8%) !important;
+  height: 100vh;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
