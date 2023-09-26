@@ -1,7 +1,8 @@
 import { Box, Button, Container, Flex, Heading, Text } from "@chakra-ui/react";
-import Circle from "./Circle";
 import star from "../assets/icon-star.svg";
 import "../sass/Button.scss";
+import Circle from "./Circle";
+import { Link } from "react-router-dom";
 
 const Card = () => {
   return (
@@ -37,14 +38,18 @@ const Card = () => {
         <Circle input={4} />
         <Circle input={5} />
       </Flex>
-      <Button
-        className="submitBtn"
-        bgColor="hsl(25, 97%, 53%)"
-        color="hsl(0, 0%, 100%)"
-        borderRadius={20}
-      >
-        Submit
-      </Button>
+      <Link to="/thankyou">
+        <Button
+          className="submitBtn"
+          bgColor="hsl(25, 97%, 53%)"
+          color="hsl(0, 0%, 100%)"
+          borderRadius={20}
+          textAlign="center"
+          width="100%"
+        >
+          Submit
+        </Button>
+      </Link>
     </Container>
   );
 };
