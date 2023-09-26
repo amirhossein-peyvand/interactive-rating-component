@@ -13,6 +13,7 @@ const Card = () => {
       display="flex"
       flexDirection="column"
       rowGap={8}
+      width="clamp(200px, 90%, 450px)"
     >
       <Circle input={star} />
       <Box>
