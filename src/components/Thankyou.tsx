@@ -1,7 +1,13 @@
 import { Container, Image, Text, Heading } from "@chakra-ui/react";
 import thankYou from "../assets/illustration-thank-you.svg";
+import useStore from "../store";
 
 const Thankyou = () => {
+  const count = useStore((s) => s.count);
+  const reset = useStore((s) => s.reset);
+
+  window.addEventListener("popstate", () => reset());
+
   return (
     <Container
       bgColor="hsl(213, 19%, 18%)"
@@ -22,7 +28,7 @@ const Thankyou = () => {
         color="hsl(25, 97%, 53%)"
         borderRadius={20}
       >
-        You selected 0 out of 0
+        You selected {count} out of 5
       </Text>
       <Heading as="h2" color="hsl(0, 0%, 100%)">
         Thank you!
